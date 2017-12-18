@@ -1,0 +1,1224 @@
+/* 
+Filename: customstyles.css
+Author: Matthew Raw
+Date Created: 11/3/17
+Last Updated: 11/3/17
+Description: css stylesheet for swinburne server side scripting assignment 1
+*/
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: #fcfcfc; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(bottom, #fcfcfc, #cbdbda); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, #fcfcfc, #cbdbda); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, #fcfcfc, #cbdbda); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, #fcfcfc, #cbdbda); /* Standard syntax */
+}
+
+a {
+    color: #333;
+    transition: 0.2s;
+}
+
+a:focus {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #ec008c;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+a:active {
+    text-decoration: none;
+    color: #005eb0;
+    transition: 0.2s;
+}
+
+/* ----------------------------- header -------------------------------------------*/  
+
+
+.headerbackground {
+    position: absolute;
+    right: 0px;
+    z-index: -1;
+}
+
+.header {
+    height: 190px;
+}
+
+/* -------------------------- logo and logo animation ---------------------------*/
+
+@keyframes logoEnter {
+    0% {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+    45% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+    60% {
+        transform: translateY(-50px);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+    90% {
+        transform: translateY(-7px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+@keyframes logoBounce {
+    0% {
+        transform: translateY(0px);
+    }
+    35% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(10px);
+    }
+    80% {
+        transform: translateY(-15px)
+    }
+    100% {
+        transform: translateY(0px)
+    }
+}
+
+.logo {
+    margin-top: 20px;
+    border: 5px solid #ec008c;
+    float: left;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 0px 3px 10px #a1a1a1;
+    z-index: 1;
+}
+
+.logoContainer {
+    margin-top: 55px;
+    height: 70px;
+    display: inline-block;
+    z-index: -1;
+}
+
+.logoHomepageAnimation {
+    animation: logoEnter 0.7s ease-in-out 0.2s 1 backwards;
+}
+
+.logoBounce {
+    animation: logoBounce 0.5s ease-in-out;
+}
+
+/*------------------------ login and my account bar  ----------------------*/
+.login {
+    padding-top: 2px;
+    color: #fff;
+}
+
+.login a {
+    color: #fff;
+    transition: 0.5s;
+}
+
+.login a:hover {
+    color: #ec008c;
+    transition: 0.5s;
+}
+
+.resetPassBtn {
+    border: none;
+    background: none;
+    font-size: 0.8em;
+    color: #ec008c;
+}
+
+.myAccountBtn {
+    background: none;
+    border: none;
+    display: inline;
+    padding: 0px;
+    transition: 0.5s;
+}
+
+.btn-primary.active, .btn-primary:active, .open>.dropdown-toggle.btn-primary {
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    color: #ec008c !important;
+    transition: 0.5s !important;
+}
+
+.myAccountBtn:hover {
+    background: none;
+    border: none;
+    color: #ec008c;
+    transition: color 0.5s !important;
+}
+
+.myAccountBtn:focus {
+    background: none;
+    border: none;
+    outline: none !important;
+}
+
+.myAccountBtn:active {
+    background: none;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    color: #ec008c !important;
+}
+
+
+.dropdown-menu {
+    left: -30px;
+    min-width: 0px;
+}
+
+/*------------------------ gradient above nav ------------------------------*/
+
+.gradient {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    width: 100%;
+    background: #00b6b0; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right, #00b6b0, #005eb0); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #00b6b0, #005eb0); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #00b6b0, #005eb0); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #00b6b0, #005eb0); /* Standard syntax */
+}
+
+.searchBoxContainer {
+    background: #fff;
+    width: 200px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+
+.searchBoxContainer input:focus {
+    border: none;
+    outline: none;
+}
+
+.searchBox {
+    border: none;
+}
+
+.searchBox:focus {
+    border: none;
+    outline: none;
+}
+
+.searchBoxSubmit {
+    height: 24px;
+    padding-top: 1px;
+    background: none;
+    border: none;
+    margin-right: 0px;
+}
+
+.searchBoxSubmit:active {
+    outline: none;
+}
+
+.searchBoxSubmit:focus {
+    outline: none;
+}
+
+.searchBoxIcon {
+    height: 20px;
+}
+
+/* -------------------------- Navbar styles --------------------------------- */
+
+.navbar {
+    margin-bottom: 0px !important;
+}
+
+.navbar-default {
+    background-color: #fff;
+    border-radius: 0px;
+    border-top: 0px;
+}
+
+.navbar-default .nav > li > a {
+    color: #333;
+    transition: 0.3s;
+}
+
+.navbar-default .nav > li > a:hover {
+    color: #ec008c;
+    transform: translateY(-2px);
+    transition: 0.3s;
+}
+
+.navbar-default .nav .active > a {
+    background: 0 !important; 
+    color: #00b6b0 !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    transform: none !important;
+
+}
+
+.navbar-default .nav .active > a:hover {
+    cursor: default;
+}
+
+/*bootstrap dropdown focus and hover behaviour*/
+.navbar-default .navbar-nav>.open>a:focus {
+    background: none;
+    color: #ec008c;
+}
+
+.dropdown-menu>li>a {
+    transition: 0.3s;
+}
+
+.dropdown-menu>li>a:hover {
+    background: none;
+    color: #ec008c;
+    transform: translateY(-2px);
+    transition: 0.3s;
+}
+
+.dropdown-menu>li>a:active {
+    color: #00b6b0;
+    transform: none;
+    transition: 0.3s;
+}
+
+/* hamburger icon styles */
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #333;
+}
+
+.navbar-toggle {
+    border-radius: 0px;
+    transition: 0.3s;
+}
+
+.navbar-default .navbar-toggle:focus {
+    background-color: #ddd;
+}
+
+.navbar-default .navbar-toggle:hover {
+    background-color: #ec008c;
+    transition: 0.3s;
+}
+
+/*--------------------------------- main styles -----------------------------------*/
+.main {
+    background-color: #fafafa;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+
+.maincontainer {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+.mainsidebar_container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.maincontent {
+    border-right: 1px solid #e5e5e5;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.subnav {
+    list-style: none;
+    transform: translateX(-20px);
+}
+
+.subnavFilters {
+    transform: translateX(20px);
+}
+
+.subnav_active {
+     color: #00b6b0;
+}
+
+.subnav_active:hover {
+     color: #00b6b0;
+     cursor: default;
+}
+
+.testing {
+    font-size: 0.8em;
+}
+
+/* store page titles */
+
+.titleContainer {
+
+}
+
+.titleGradient {
+    background: linear-gradient(to right, #ccf0ef, #99bedf);
+    padding-left: 45px;
+    padding-top: 12px;
+    padding-bottom: 1px;
+    height: 70px;
+}
+
+.pageTitle {
+    margin-top: 0px;
+}
+
+.singleTitle {
+    margin-top: 12px;
+}
+
+.innerPageContainer {
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 15px;
+    min-height: 400px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+}
+
+/* --------------------------------- update account -----------------------------*/
+.updatecontainer {
+    
+}
+
+.accountBtn {
+    width: initial !important;
+}
+/* --------------------------------- sort buttons -----------------------------*/
+
+.sortcontainer {
+    margin-bottom: 10px;
+}
+
+.sortForm {
+    display: inline;
+}
+
+.sortLabel {
+    display: inline;
+    font-size: 0.8em;
+}
+
+.sortselect {
+    font-size: 0.8em;
+}
+
+.sortBtn {
+    font-size: 0.8em;
+    color: #000;
+    transition: 0.2s;
+}
+
+.sortBtn:hover {
+    color: #ec008c;
+    transition: 0.2s;
+}
+
+.resetFilterBtn {
+    background: #ec008c;
+    border: none;
+    font-size: 0.7em;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* ---------------------------------- card styles ---------------------------------*/
+
+.maincardrow {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    }
+
+.cardcontainer {
+    overflow: hidden;
+}
+
+.card {
+    text-align: center;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    transition: 0.2s;
+}
+
+.card:hover {
+    border: 1px solid #ec008c;
+    color: #ec008c;
+    transition: 0.4s;
+}
+
+.card img {
+    height: auto;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+
+/* used when mouse hovers over card to enlarge image */
+.moveUp {
+    transform: translateY(-10px);
+    transition: 0.4s;
+}
+
+.item_moveUp {
+    transform: translateY(-5px);
+    transition: 0.4s;
+}
+
+/* class sits on children of card so they transition back gradually after hover event */
+.child {
+    transition: 0.4s;
+}
+
+
+
+/* -------------------------------- item cards -------------------------------- */
+
+.itemcardrow {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    }
+
+.stock {
+    font-size: 0.8em;
+}
+
+.itemcard {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    transition: 0.2s;
+}
+
+.itemcard_a {
+    display: block;
+    padding-bottom: 3px;
+    padding-top: 32px;
+}
+
+.itemcard:hover {
+    border: 1px solid #ec008c;
+    color: #ec008c;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.itemcard img {
+    height: auto;
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 0.8em;
+}
+
+.addtocart {
+    background-color: #fff;
+    border: 1px solid #ec008c;
+    color: #ec008c;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transition: 0.2s;
+}
+
+.addtocart:hover {
+    background-color: #ec008c;
+    color: #fff;
+    border: 1px solid #ec008c;
+    transition: 0.2s;
+}
+
+
+
+.addtocart:active {
+    border: none;
+}
+
+.addtocart:focus {
+    border: none;
+}
+
+.wishlistForm {
+    position: absolute;
+    display: inline;
+    left: 18px;
+    top: 3px;
+}
+
+.addToWishlist {
+    background: none;
+    border: none;
+    transition: 0.2s;
+    padding: 0px;
+}
+
+.addToWishlist:hover {
+    transition: 0.2s;
+}
+
+.wishlistimg {
+    width: auto !important;
+    height: 25px !important;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 0px;
+}
+
+.cartimg {
+    width: auto !important;
+    height: 25px !important;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 0px !important;
+}
+
+.carttxt {
+    display: inline;
+    font-size: 0.9em;
+}
+
+.outofstock {
+    color: #D3D3D3;
+    margin-bottom: 13px;
+}
+
+/* -------------------------------- cards for forms ---------------------------------*/
+
+.formcard {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 10px;
+    border: 1px solid #e5e5e5;
+}
+
+.formcardregister {
+    border: none;
+}
+
+.formcard h4 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+.formcard label {
+    font-size: 0.9em;
+    margin-bottom: 2px;
+}
+
+.formcard input {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.formcard textarea {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.formcard select {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.formcardButtons {
+    text-align: center;
+}
+
+.formcardsubmit {
+    width: auto !important;
+}
+
+.pageButtons {
+    text-align: center;
+}
+
+/*--------------------------------- search styles -----------------------------------*/
+
+.searchNoResults {
+    height: 80vh;
+    padding-top: 18vh;
+}
+/*--------------------------------- previous orders (my orders) styles -----------------------------------*/
+
+.prevOrdersContainer {
+    padding: 15px;
+    min-height: 400px;
+}
+
+.prevOrderH5 {
+    font-weight: 700;
+}
+
+.accordion {
+    border: 1px solid #e5e5e5;
+    padding: 10px;
+    background: #fff;
+    margin-bottom: 10px;
+}
+
+.prevOrderTxt {
+    margin-right: 20px;
+}
+
+/* ------------------------ accordion elements ------------------------ */
+.accordionHead {
+    cursor: pointer;
+}
+
+.accordionTitle {
+    display: inline;
+}
+
+.contentContainer {
+    overflow: hidden;
+    max-height: 0px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.accordionContent {
+    padding-top: 15px;
+}
+
+.contentContainerOpen {
+    max-height: 1500px;
+    opacity: 1;
+    transition: 2s;
+}
+
+.arrowUp {
+    transform: rotate(-90deg);
+    height: 14px;
+    width: auto;
+    display: inline;
+    transition: 0.5s;
+
+}
+
+.arrowDown {
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
+
+/*--------------------------------- wishlist styles -----------------------------------*/
+
+.wishlistOutOfStock {
+    margin-top: 13px;
+}
+
+.wishlistRemoveBtn {
+    font-size: 0.8em;
+    color: #fff;
+    background-color: #ec008c;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 2px;
+    transition: 0.2s;
+}
+
+.wishlistAddToCart {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.wishlistRight {
+    text-align: center;
+}
+
+/*--------------------------------- cart styles -----------------------------------*/
+
+.totalDue {
+    margin-left: 10px;
+}
+
+.cartImg {
+    max-height: 180px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.cartHeader {
+    background: linear-gradient(to right, #ccf0ef, #99bedf);
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cartRow {
+    background-color: #fff;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.cartLeft {
+
+}
+
+/*cart right changes appearance in media query on small screen sizes*/
+.cartRight {
+}
+
+.cartUpdateQty {
+    width: 50px;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.cartUpdateQtyBtn {
+    background: #ec008c;
+    border: none;
+    font-size: 0.8em;
+    color: #fff;
+    border-radius: 5px;
+    display: none;
+}
+
+.cartBtnVisible {
+    display: block !important;
+}
+
+.cartRemoveBtn {
+    background: #ec008c;
+    border: none;
+    font-size: 0.8em;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.cartMobTotal {
+        display: none;
+    }
+
+.cartError {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 20px;
+    background: #ec008c;
+    color: #fff;
+}
+
+.checkoutButtons {
+    padding-bottom: 10px;
+}
+
+.thisPage {
+    background: #ec008c;
+    color: #fff;
+}
+
+/*--------------------------------- checkout styles -----------------------------------*/
+
+.checkoutSubmit {
+    border-radius: 5px;
+    border: none;
+    background-color: #ec008c;
+    color: #fff;
+    padding: 10px;
+    width: initial !important;
+}
+
+.checkoutNav {
+    padding-top: 10px;
+}
+
+.checkoutBack {
+    color: #ec008c;
+}
+
+.checkoutBack:hover {
+    color: #fff;
+}
+
+.checkoutActive {
+    color: #ec008c;
+}
+
+.checkoutNext {
+}
+
+.back {
+    border-radius: 5px;
+    border: none;
+    background-color: #333333;
+    color: #fff;
+    padding: 11px;
+    margin: 10px;
+}
+
+.back:hover {
+    color: #fff;
+}
+
+.continueShopping {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.finalCartButton {
+    background-color: #ec008c;
+}
+
+.printButton {
+    cursor: pointer;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.tdBorderTop {
+    border-top: 1px solid #e5e5e5;
+}
+
+.spacerRow {
+    height: 20px;
+}
+
+
+/*--------------------------------- orderSummary styles -----------------------------------*/
+
+.orderSummary {
+    margin-right: 15px;
+    background: #fff;
+    padding-top: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border: 1px solid #e5e5e5;
+}
+
+.orderSummaryTable {
+    width: 100%;
+    background: #fff;
+    padding-top: 10px;
+}
+
+.orderSummaryTable tr {
+    margin-bottom: 3px;
+}
+
+.orderSummaryThumbTd {
+    width: 75px;
+}
+
+.orderSummaryThumb {
+    float: left;
+    height: 70px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.orderSummaryText {
+    font-weight: bold;
+}
+
+/*--------------------------------- footer styles -----------------------------------*/
+.footer {
+    color: #fff;
+    font-size: 0.9em;
+    text-align: center;
+    margin-bottom: 80px;
+    background: #00b6b0; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(right, #00b6b0, #005eb0); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #00b6b0, #005eb0); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #00b6b0, #005eb0); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #00b6b0, #005eb0); /* Standard syntax */
+}
+
+#disclaimer {
+    font-size: 0.7em;
+}
+/* -------------------------------  alignment classes ------------------------------*/
+
+.inline {
+    display: inline;
+}
+
+.block {
+    display: block;
+    padding-bottom: 10px;
+    padding-top: 30px;
+}
+
+.floatleft {
+    float: left;
+}
+
+.floatright {
+    float: right;
+}
+
+.paddingBottom {
+    padding-bottom: 15px;
+}
+
+/* -------------------------------  test classes ------------------------------*/
+
+.red {
+    background: red;
+    height: 200px;
+}
+
+.blue {
+    background: blue;
+    height: 200px;
+}
+
+.height {
+    height: 600px;
+}
+
+/*----------------------- Media queries for screen size or smaller -----------------*/
+
+
+/* Extra small devices*/
+@media (max-width: 575px) { 
+    .back {
+        font-size: 0.8em;
+    }
+
+    .checkoutSubmit {
+        font-size: 0.8em;
+    }
+}
+
+/* Small devices*/
+@media (max-width: 767px) { 
+    .header {
+        text-align: center;
+    }
+    
+    .logo {
+        display: inline-block;
+        float: none;
+        box-shadow: 0px 0px 15px #333333;
+    }
+    
+    .logo img {
+        width: 290px;
+        height: auto;
+    }
+    .navbar-default .navbar-collapse {
+        background-color: #fcfcfc;
+    }
+
+     /* Small screen animation for when navbar links are clicked */
+    .navbar-default .nav > li > a:active {
+    color: #005eb0;
+    transition: 0.2s;
+    }
+
+    .footerWrapper{
+    max-width: 75%;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+
+    /* give cards some headroom when collapsed */
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .itemcard {
+        margin-bottom: 20px;
+    }
+
+    /* cancel padding on bottom of row that causes every 3rd item to have uneven spacing 
+    on small screens when items in full width. */
+    .itemcardrow {
+        padding-bottom: 0px;
+    }
+
+    /* max height for card images */
+    .card img {
+        max-height: 200px;
+        width: auto;
+    }
+
+    .itemcard img {
+        max-height: 200px;
+        width: auto;
+    }
+
+    .prodName {
+        font-size: 1em !important;
+    } 
+
+    /* class to hide items on small screens */
+    .xs-hide {
+        display: none;
+    }
+
+    .searchBoxContainer {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3px;
+    }
+
+    .login {
+        text-align: center;
+    }
+
+    .navbar-toggle {
+        float: left;
+        margin-left: 15px;
+        margin-right: 0px;
+    }
+
+
+    /*------- Cart Mobile CSS --------*/
+    .checkoutTotals {
+        text-align: center;
+    }
+
+    .checkoutButtons {
+        text-align: center;
+    }
+    
+    .price {
+        font-size: 0.7em;
+    }
+
+    /* give totals a background on small screens */
+    .cartRight {
+        background: linear-gradient(to right, #ccf0ef, #99bedf);
+    }
+
+    /* align qty update form on small screens */
+    .updateQtyForm {
+        margin-left: 20px;
+        margin-bottom: 10px;
+    }
+
+    .cartUpdateQty {
+        margin-top: 0px;
+    }
+
+    .cartMobTotal {
+        display: block !important;
+    }
+
+    .cartMobQty {
+        display: block !important;
+        margin-left: 20px;
+    }
+
+    .cartHeader {
+        padding-bottom: 0px;
+        padding-top: 0px;
+    }
+
+
+}
+
+/* Medium devices*/
+@media (max-width: 991px) { 
+    .prodName {
+        font-size: 0.8em;
+    } 
+}
+
+/* Large devices*/
+@media (max-width: 1199px) { 
+    
+}
+
+    
+/*------------------------- Media queries for screen size or larger ------------------*/
+    
+    
+/*Small devices*/
+@media (min-width: 544px) { 
+    
+    }
+
+/*Medium devices*/
+@media (min-width: 768px) { 
+
+    .gradient {
+        padding-left: 40px;
+    }
+
+    /* Large screen Animation for when navbar links are clicked */
+    .navbar-default .nav > li > a:active {
+    color: #005eb0;
+    transform: translateY(1px);
+    transition: 0.2s;
+    }
+
+    .footerWrapper{
+    max-width: 50%;
+    display: inline-block;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    }
+
+    /* gets rid of padding so vertical line isn't too spaced away */
+    .maincontainer {
+        padding-right: 0px;
+    }
+
+    .checkoutNav {
+        text-align: right;
+    }
+
+    /* on update account page add margin on larger screens */
+    .accountRight {
+        margin-right: 15px;
+    }
+
+    .accountLeft {
+        margin-left: 15px;
+    }
+}
+
+/*Large devices*/
+@media (min-width: 992px) {
+
+    }
+
+/*Extra large devices*/
+@media (min-width: 1200px) { 
+    
+    .itemcardrow {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .searchResultTitle {
+        padding-left: 30px;
+    }
+}

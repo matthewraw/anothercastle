@@ -1,0 +1,67 @@
+/* 
+Filename: printconfirmation.css
+Author: Matthew Raw
+Date Created: 11/3/17
+Last Updated: 11/3/17
+Description: css stylesheet for printing orders - server side scripting assignment 1
+*/
+
+@media print {
+	body {
+		background: #fff;
+	}
+
+	.headerbackground {
+		display: none;
+	}
+
+	.logo {
+		box-shadow: none;
+	}
+
+	.gradient {
+		display: none;
+	}
+
+	.navbar-default {
+		display: none;
+	}
+
+	.checkoutNav {
+		display: none;
+	}
+
+	.finalCartButton {
+		display: none;
+	}
+
+	.printButton {
+		display: none;
+	}
+
+	.innerPageContainer {
+		border: none;
+		margin-top: 0px;
+    	padding-top: 5px;
+	}
+
+	.main {
+		background-color: #fff;
+		border-bottom: 1px solid #e5e5e5;
+	}
+
+	.cartHeader {
+		background: #fff;
+		border-top: 1px solid #e5e5e5;	
+	}
+
+	.footer {
+		display: none;
+	}
+
+	.spacerRow {
+		height: 20px;
+	}
+	
+
+}
